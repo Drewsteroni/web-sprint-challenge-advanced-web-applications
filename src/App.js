@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import { PrivateRoute } from "./components/PrivateRoute";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {PrivateRoute} from "./components/PrivateRoute";
 import BubblePage from "./components/BubblePage";
-import Logout from "./components/LogoutButton";
+import LogoutButton from "./components/LogoutButton";
 import Login from "./components/Login";
 import "./styles.scss";
 
@@ -12,8 +12,8 @@ function App() {
       <div className="App">
         <header>
           Color Picker Sprint Challenge
-            <Logout />
-        </header>
+          <LogoutButton />
+        </header> 
         <Route exact path="/" component={Login} />
         <PrivateRoute path='/bubbles' component={BubblePage} />
       </div>

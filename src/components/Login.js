@@ -24,11 +24,11 @@ const Login = () => {
           .catch(err => console.log(err))
   }
 
-  const [error, setError] = useState("");
+  const error = "";
   //replace with error state
 
   axios
-    .post("http://localhost:5000/api/login", formInput)
+    .post("http://localhost:5000/api/login", form)
     .then(res => console.log(res.data.token))
     .catch(err => console.log(err))
   

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-const Logout = () => {
+const LogoutButton = () => {
     const { push } = useHistory();
 
     const handleLogout = e => {
@@ -13,6 +13,6 @@ const Logout = () => {
     return (
         <button data-testid='logoutButton' onClick={handleLogout}>Logout</button>
     )
-};
+}
 
-export default Logout;
+export default LogoutButton; 
