@@ -6,7 +6,8 @@ const EditMenu = (props) => {
   const handleChange = (e) => {
     if (e.target.name === "colorName") {
       setEditColor({ ...editColor, color: e.target.value })
-    } else if (e.target.name === "colorHex") {
+    } 
+    else if (e.target.name === "colorHex") {
       setEditColor({
         ...editColor,
         code: { hex: e.target.value },
@@ -23,14 +24,15 @@ const EditMenu = (props) => {
     toggleEdit(false);
   }
 
-  return(<form id="edit_menu" data-testid="edit_menu" onSubmit={handleSubmit}>
+  return(
+      <form id="edit_menu" data-testid="edit_menu" onSubmit={handleSubmit}>
       <legend>edit color</legend>
       <label htmlFor="colorName">color name:
         <input
           name="colorName"
           data-testid="colorName"
           id="colorName"
-          onChange={ handleChange}
+          onChange={handleChange}
           value={editColor.color}
         />
       </label>
